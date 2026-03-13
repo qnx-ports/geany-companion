@@ -3,7 +3,7 @@
 # Maintainer: Aaron Bassett <abassett@qnx.com>
 pkgname=geany
 pkgver=2.1
-pkgrel=1
+pkgrel=${pkgrel:-0}
 pkgdesc="fast and lightweight IDE"
 url="https://www.geany.org"
 arch="all"
@@ -87,6 +87,7 @@ dev() {
 }
 
 
+options="$options ${DISABLE_CHECK:+!check}"
 sha512sums="
 360c6406345dc3747b4d8f3324b992cdaed1b9224a425fb33def14bb1c97194abda66e6262b5867200af547d5bab212b741004984df875eb77c069ccd43dcf1d  geany-2.1.tar.gz
 89551143b5557a632b325cceef9c0fa56ea0f9a28d1bd7bed4dba99af5005812702bbf0519f6ce97ce77c362fa454caac8d18c168ffb4af5f91ed6a4df2995e9  dbus-glib-0.76.c.tags
